@@ -1,8 +1,8 @@
 {
   "name": "covidwatch",
   "version": "1.0.0",
-  "description": "",
-  "author": "Agnel Nieves Fuentes",
+  "description": "A simple take on corona virus updates",
+  "author": "Agnel Nieves Fuentes <agnelnieves@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -12,9 +12,12 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0"
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "countup.js": "^2.0.4",
+    "d3": "^5.15.1",
+    "globe.gl": "^2.8.6",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
