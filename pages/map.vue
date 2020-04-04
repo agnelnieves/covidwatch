@@ -1,19 +1,48 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="title">
-        Map
-      </h1>
-    </div>
+    <div ref="globeViz"></div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Globe from 'globe.gl'
+// import { CountUp } from 'countup.js'
+import * as d3 from 'd3'
+// import { request } from '~/assets/js/utils'
+import { BACKGROUND_COLOR } from '~/assets/js/constants'
 
 export default {
-  components: {
-    Logo
+  components: {},
+  mounted() {
+    this.init()
+  },
+  methods: {
+    init() {
+      const weightColor = d3
+        .scaleSequentialSqrt(d3.interpolateYlOrRd)
+        .domain([0, 1e7])
+
+      const world = Globe()(this.$refs.globeViz)
+        .globeImageUrl(
+          '//raw.githubusercontent.com/agnelnieves/covidwatch/feature-map/assets/images/earth-dark.jpg'
+        )
+        // .backgroundImageUrl(
+        //   '//raw.githubusercontent.com/agnelnieves/covidwatch/feature-map/assets/images/night-sky.png'
+        // )
+        .backgroundColor(BACKGROUND_COLOR)
+        .hexBinPointWeight('pop')
+        .hexAltitude((d) => d.sumWeight * 6e-8)
+        .hexBinResolution(4)
+        .hexTopColor((d) => weightColor(d.sumWeight))
+        .hexSideColor((d) => weightColor(d.sumWeight))
+        .hexBinMerge(true)
+        .enablePointerInteraction(false) // performance improvement
+
+      // Add auto-rotation
+      world.controls().autoRotate = true
+      world.controls().autoRotateSpeed = 0.1
+      world.controls().enableZoom = false
+    }
   }
 }
 </script>

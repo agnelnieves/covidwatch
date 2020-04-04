@@ -5,7 +5,7 @@
         <i class="fas fa-newspaper"></i>
       </nuxt-link>
       <nuxt-link
-        aria-label="Map Visualizer"
+        aria-label="World Visualizer"
         tooltip="Map Visualizer"
         flow="right"
         to="/map"
@@ -68,6 +68,8 @@ nav {
   flex-direction: column;
   align-items: center;
   a {
+    min-width: 42px;
+    min-height: 42px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -106,7 +108,7 @@ main {
 
 @media screen and (max-width: 425px) {
   html {
-    margin: 20px;
+    margin: 0 0 20px 0;
     margin-bottom: 0;
   }
 
@@ -114,7 +116,9 @@ main {
     width: 30px;
     margin-right: 20px;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     a {
       margin-right: 20px;
       margin-bottom: 0;
@@ -126,7 +130,10 @@ main {
   }
 
   main {
-    width: calc(100vw - 40px);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    align-self: center;
+    width: 95%;
     height: calc(100vh - 80px);
   }
 }
