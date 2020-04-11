@@ -3,8 +3,8 @@
 const { execSync } = require('child_process');
 const inquirer = require('inquirer');
 
-const app = require('./index');
-const log = require('./logger');
+const app = require('../node_modules/cz-customizable/index');
+const log = require('../node_modules/cz-customizable/logger');
 
 log.info('cz-customizable standalone version');
 

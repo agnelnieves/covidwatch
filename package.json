@@ -11,7 +11,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "commit": "./node_modules/cz-customizable/standalone.js"
+    "commit": "./.scripts/standalone.js"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
