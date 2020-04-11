@@ -5,24 +5,27 @@
   "author": "Agnel Nieves Fuentes <agnelnieves@gmail.com>",
   "private": true,
   "scripts": {
+    "clean": "rm -rf node_modules && rm -rf dist",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "commit": "./node_modules/cz-customizable/standalone.js"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
     "countup.js": "^2.0.4",
+    "cz-customizable": "^6.2.0",
     "d3": "^5.15.1",
     "globe.gl": "^2.8.6",
     "nuxt": "^2.0.0"
   },
-"contributors": [
-  "Agnel Nieves <agnelnieves@gmail.com>",
-  "Yoshuam Alicea <yoshuamalicea@gmail.com>"
-],
+  "contributors": [
+    "Agnel Nieves <agnelnieves@gmail.com>",
+    "Yoshuam Alicea <yoshuamalicea@gmail.com>"
+  ],
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
