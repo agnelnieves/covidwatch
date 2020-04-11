@@ -19,6 +19,10 @@
     "globe.gl": "^2.8.6",
     "nuxt": "^2.0.0"
   },
+"contributors": [
+  "Agnel Nieves <agnelnieves@gmail.com>",
+  "Yoshuam Alicea <yoshuamalicea@gmail.com>"
+],
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",

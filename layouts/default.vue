@@ -28,7 +28,7 @@
 </template>
 
 <style lang="scss">
-@import '~assets/variables';
+@import '~assets/colors';
 @import '~assets/tooltip';
 
 .page-enter-active,
