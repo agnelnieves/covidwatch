@@ -89,7 +89,7 @@ npm run commit
 9. **nuxt.config.js:** The nuxt.config.js file contains Nuxt.js custom configuration.
 10. **package.json:** The package.json file contains your Application dependencies and scripts.
 
-MORE DOCUMENTATION TO ADD
+MORE DOCUMENTATION TO ADD 4 sho!
 
 ## 🔣 Aliases
 
