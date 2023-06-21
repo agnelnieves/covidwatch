@@ -20,7 +20,7 @@
     "cz-customizable": "^6.2.0",
     "d3": "^5.15.1",
     "globe.gl": "^2.8.6",
-    "nuxt": "^2.0.0"
+    "nuxt": "^3.4.3"
   },
   "contributors": [
     "Agnel Nieves <agnelnieves@gmail.com>",
